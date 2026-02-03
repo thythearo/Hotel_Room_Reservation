@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+}
+.container-fulid{
+    width: 100%;
+    background-color: aqua;
+}
+.box-img{
+    width: 100%;
+    background-color: red;
+}
