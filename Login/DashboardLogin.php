@@ -18,86 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <style>
-        *{
-            font-family: "Noto Sans", sans-serif;
-            
-        }
-        .h-font{
-          font-family: "Noto Sans", sans-serif;
-        }
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-          -webkit-appearance: none; 
-          margin: 0;                
-        }
-
-        input[type=number] {
-          -moz-appearance: textfield; 
-        }
-
-        .banner-img {
-          width: 95%;
-          height: 350px;     /* 👈 change this value */
-          object-fit: cover;
-          border-radius: 20px;
-            /* keeps image nice */
-        }
-        .booking-box {
-          margin-top: -50px; /* 👈 exactly what you want */
-          z-index: 10;
-        }
-        @media screen and (max-width: 575px) {
-          .booking-box {
-            margin-top: 0px;
-            z-index: 10;
-          }
-          .banner-img {
-            width: 85%;
-            height: 200px;    
-            object-fit: cover;
-            border-radius: 0;
-          }
-          .img-rooms{
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-          }
-
-        }
-        .booking-card{
-          border-radius: 20px 20px 0 0;
-        }
-        .custom-bg{
-          background-color: #2ec1ac;
-        }
-        .custom-bg:hover{
-          background-color: #279e8c;
-        }
-        .room-box{
-          width: 95%;
-          background-color: #279e8c;
-
-        }
-        .big-box{
-          width: 400px;
-          height: 300px;
-        }
-        .img-rooms{
-          width: 400px;
-          height: 300px;
-          object-fit: cover;
-        }
-        .card{
-          margin-left: 60px;
-        
-        }
-        .card-img-top{
-          height: 200px;
-          object-fit: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="/hotel_room_reservation/Css/index.css">
+    
 </head>
 <body class="bg-light">
 
@@ -315,7 +237,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-4 col-md-6 my-3">
-        <div class="card border-0 shadow" style="max-width: 350px; margin-auto; ">
+        <div class="card border-0 shadow" style="max-width: 350px; margin: auto; ">
           <img src="/hotel_room_reservation/images/c-1.jpg" class="card-img-top">
           <div class="card-body">
             <h5>Simple Room Name</h5>
@@ -360,7 +282,7 @@
                 <i class="bi bi-star-fill text-warning"></i>
               </span>
             </div>
-            <div class="d-flex justify-content-evenly mb-2">
+            <div class="d-flex justify-content-evenly mb-2 mt-2">
               <a href="#" class="btn btn-sm text-white custom-bg shadow-none  ">Book Now</a>
               <a href="#" class="btn btn-sm btn-outline-dark shadow-none  ">More Details</a>
             </div>
@@ -368,8 +290,8 @@
         </div>
       </div>
 
-            <div class="col-lg-4 col-md-6 my-3">
-        <div class="card border-0 shadow" style="max-width: 350px; margin-auto; ">
+      <div class="col-lg-4 col-md-6 my-3">
+        <div class="card border-0 shadow" style="max-width: 350px; margin: auto; ">
           <img src="/hotel_room_reservation/images/c-2.jpg" class="card-img-top">
           <div class="card-body">
             <h5>Simple Room Name</h5>
@@ -414,7 +336,7 @@
                 <i class="bi bi-star-fill text-warning"></i>
               </span>
             </div>
-            <div class="d-flex justify-content-evenly mb-2">
+            <div class="d-flex justify-content-evenly mb-2 mt-2">
               <a href="#" class="btn btn-sm text-white custom-bg shadow-none  ">Book Now</a>
               <a href="#" class="btn btn-sm btn-outline-dark shadow-none  ">More Details</a>
             </div>
@@ -422,8 +344,8 @@
         </div>
       </div>
 
-            <div class="col-lg-4 col-md-6 my-3">
-        <div class="card border-0 shadow" style="max-width: 350px; margin-auto; ">
+      <div class="col-lg-4 col-md-6 my-3">
+        <div class="card border-0 shadow" style="max-width: 350px; margin: auto; ">
           <img src="/hotel_room_reservation/images/c-3.jpg" class="card-img-top">
           <div class="card-body">
             <h5>Simple Room Name</h5>
@@ -468,8 +390,8 @@
                 <i class="bi bi-star-fill text-warning"></i>
               </span>
             </div>
-            <div class="d-flex justify-content-evenly mb-2">
-              <a href="#" class="btn btn-sm text-white custom-bg shadow-none  ">Book Now</a>
+            <div class="d-flex justify-content-evenly mb-2 mt-2">
+              <a href="#" class="btn btn-sm text-white custom-bg shadow-none ">Book Now</a>
               <a href="#" class="btn btn-sm btn-outline-dark shadow-none  ">More Details</a>
             </div>
           </div>
@@ -481,7 +403,98 @@
     </div>
   </div>
 
+<!-- FACILITIES -->
+
+  <h2 class="mt-1 pt-4 mb-4 text-center fw-bold">OUR FACILITIES</h2>
+  <div class="container">
+    <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+      <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/hotel_room_reservation/images/wifi-01.png" width = "80px";>
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/hotel_room_reservation/images/Star.svg" width = "80px";>
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/hotel_room_reservation/images/wifi-01.png" width = "80px";>
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/hotel_room_reservation/images/wifi-01.png" width = "80px";>
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+        <img src="/hotel_room_reservation/images/wifi-01.png" width = "80px";>
+        <h5 class="mt-3">Wifi</h5>
+      </div>
+      <div class="col-lg-12 text-center mt-5">
+        <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Facilities</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <h2 class="mt-1 pt-4 mb-4 text-center fw-bold">TESTIMONIALS</h2>
   
+  <div class="container">
+    <div class="swiper swiper-testimonials">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide bg-white p-4">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="/hotel_room_reservation/images/Star.svg" width= "30px">
+            <h6 class="m-0 ms-2">ធី ធារ៉ូ</h6>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ad sapiente, voluptates porro, blanditiis illum sed eveniet architecto veritatis minus enim. Eligendi corrupti delectus pariatur itaque alias saepe, ea numquam.
+          </p>
+          <div class="Rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
+        <div class="swiper-slide bg-white p-4">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="/hotel_room_reservation/images/Star.svg" width= "30px">
+            <h6 class="m-0 ms-2">ហ៊ាក់ គឹមរ៉ាន</h6>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ad sapiente, voluptates porro, blanditiis illum sed eveniet architecto veritatis minus enim. Eligendi corrupti delectus pariatur itaque alias saepe, ea numquam.
+          </p>
+          <div class="Rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
+        <div class="swiper-slide bg-white p-4">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="/hotel_room_reservation/images/Star.svg" width= "30px">
+            <h6 class="m-0 ms-2">សែន សាន</h6>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ad sapiente, voluptates porro, blanditiis illum sed eveniet architecto veritatis minus enim. Eligendi corrupti delectus pariatur itaque alias saepe, ea numquam.
+          </p>
+          <div class="Rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
+
+      </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  </div>
 
    <br><br><br>
    <br><br><br>
@@ -501,6 +514,25 @@
           disableOnInteraction: false,
         }
       });
-    </script>
+
+      // Servey Message Swiper
+      var swiper = new Swiper(".swiper-testimonials", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      slidesPerView: "3",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 </html>
