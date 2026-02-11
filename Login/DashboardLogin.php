@@ -437,7 +437,7 @@
   <!-- Testimonials -->
   <h2 class="mt-1 pt-4 mb-4 text-center fw-bold">TESTIMONIALS</h2>
   
-  <div class="container">
+  <div class="container mt-5">
     <div class="swiper swiper-testimonials">
       <div class="swiper-wrapper">
 
@@ -489,15 +489,97 @@
             <i class="bi bi-star-fill text-warning"></i>
           </div>
         </div>
-
       </div>
-    <div class="swiper-pagination"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="col-lg-12 text-center mt-5">
+      <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Know More</a>
+    </div>
   </div>
 
+  <!-- REACH US -->
+  <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">REACH US</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+        <iframe class="w-100" height="320px" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d970.4908776449423!2d104.1659496266012!3d13.352545083563905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDIxJzA5LjEiTiAxMDTCsDA5JzU5LjAiRQ!5e0!3m2!1sen!2skh!4v1770796546416!5m2!1sen!2skh"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="bg-white p-4 rounded mb-4">
+          <h5>Call Us</h5>
+          <a href="tell: +885713074177"class="d-inline-block mb-2 text-decoration-none text-dark">
+            <i class="bi bi-telephone-fill"></i>+885713074177
+          </a>
+          <br>
+          <a href="tell: +885713074177"class="d-inline-block text-decoration-none text-dark">
+            <i class="bi bi-telephone-fill"></i>+885713074177
+          </a>
+        </div>
+          <div class="bg-white p-4 rounded mb-4">
+            <h5>Follow us</h5>
+            <a href="#"class="d-inline-block mb-3">
+              <span class="badge bg-light text-dark fs-6 p-2 ">
+                <i class="bi bi-twitter me-1"></i> Twitter
+              </span>
+            </a>
+            <br>
+            <a href="#"class="d-inline-block mb-3">
+              <span class="badge bg-light text-dark fs-6 p-2 ">
+                <i class="bi bi-facebook me-1"></i> Facebook
+              </span>
+            </a>
+            <br>
+            <a href="#"class="d-inline-block">
+              <span class="badge bg-light text-dark fs-6 p-2 ">
+                <i class="bi bi-instagram me-1"></i> Instagram
+              </span>
+            </a>
+          </div>
+      </div>
+    </div>
   </div>
 
-   <br><br><br>
-   <br><br><br>
+  <div class="container-fluid bg-white mt-5">
+    <div class="row">
+      <div class="col-lg-4 p-4">
+        <h3 class="fw-bold fs-3 mb-2">Ai Hotel</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia dolores quam,
+           molestiae harum, optio nesciunt suscipit modi aut sapiente in velit cupiditate voluptate assumenda
+           officiis vel architecto dignissimos eligendi.
+        </p>
+      </div>
+      <div class="col-lg-4 p-4">
+        <h5 class="mb-3">Links</h5>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a> <br>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</a> <br>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a> <br>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Contact Us</a> <br>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">About</a>
+      </div>
+      <div class="col-lg-4 p-4">
+        <h5 class="mb-3">Follow us</h5>
+        <a href="#"class="d-inline-block text-dark text-decoration-none mb-2">
+          <i class="bi bi-twitter me-1"></i> Twitter
+        </a> <br>
+        <a href="#"class="d-inline-block text-dark text-decoration-none mb-2">
+          <i class="bi bi-facebook me-1"></i> Facebook
+        </a> <br>
+        <a href="#"class="d-inline-block text-dark text-decoration-none">
+          <i class="bi bi-instagram me-1"></i> Instagram
+        </a> <br>
+      </div>
+    </div>
+  </div>
+
+  <h6 class="text-center bg-dark text-white p-3 m-0">
+    THY THEARO <br>
+    HEAK KIMRAAN <br>
+    SAEN SAN <br>
+    MAB MEAS <br>
+    PHOUEN SOPHEA <br>
+    VERY DOEY
+  </h6>
 
 
     
@@ -527,11 +609,25 @@
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       },
       pagination: {
         el: ".swiper-pagination",
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }
     });
   </script>
 </body>
