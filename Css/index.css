@@ -1,3 +1,7 @@
+        :root{
+          --teal: #2ec1ac;
+          --teal-hover: #279e8c;
+        }
 
         *{
             font-family: "Noto Sans", sans-serif;
@@ -50,16 +54,16 @@
           border-radius: 20px 20px 0 0;
         }
         .custom-bg{
-          background-color: #2ec1ac;
-          border: 1px #2ec1ac;
+          background-color: var(--teal);
+          border: 1px var(--teal);
         }
         .custom-bg:hover{
-          background-color: #279e8c;
-          border-color: #279e8c;
+          background-color: var(--teal-hover);
+          border-color: var(--teal-hover);
         }
         .room-box{
           width: 95%;
-          background-color: #279e8c;
+          background-color: var(--teal);
 
         }
         .big-box{
@@ -79,3 +83,8 @@
           height: 200px;
           object-fit: cover;
         }
+  .h-line{
+    width: 150px;
+    margin: 0 auto;
+    height: 1.7px;
+  }
