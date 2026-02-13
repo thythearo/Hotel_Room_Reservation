@@ -47,7 +47,7 @@
         </p>
       </div>
       <div class="col-lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-        <img src="/hotel_room_reservation/images/about/mt-2.jpg" class="w-100">
+        <img src="/hotel_room_reservation/images/about/mt-1w.jpg" class="w-100">
       </div>
     </div>
   </div>
@@ -80,7 +80,7 @@
     </div>
   </div>
 
-  <h3 class="my-5 fw-bold text-center">MANAGEMENT TEAMS</h3>
+  <h3 class="my-5 fw-bold text-center">Owner Hotel</h3>
 
 
   <!-- swiper js -->
@@ -88,28 +88,28 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper mb-5">
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/mt-2.jpg" class="w-50">
+          <img src="/hotel_room_reservation/images/about/mt-2.jpg" class="w-100">
           <h5 class="mt-2">THY THEARO</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/mt-2.jpg" class="w-50">
+          <img src="/hotel_room_reservation/images/about/kimran1.jpg" class="w-100" height="235px">
           <h5 class="mt-2">HEAK KIMRANN</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/san.jpg" class="w-50">
+          <img src="/hotel_room_reservation/images/about/san.jpg" class="w-100">
           <h5 class="mt-2">SAEN SAN</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/mt-2.jpg" class="w-50">
+          <img src="/hotel_room_reservation/images/about/meas.png" class="w-100">
           <h5 class="mt-2">MAB MEAS</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/mt-2.jpg" class="w-50">
+          <img src="/hotel_room_reservation/images/about/sophea1.jpg" width="155px">
           <h5 class="mt-2">PHOUEN SOPHEA</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/mt-2.jpg" class="w-50">
-          <h5 class="mt-2">VERY DEOY</h5>
+          <img src="/hotel_room_reservation/images/about/dery.jpg" class="w-100">
+          <h5 class="mt-2">VOEY DOEY</h5>
         </div>
         
       </div>
@@ -127,9 +127,25 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 6,
+      spaceBetween: 40,
       pagination: {
         el: ".swiper-pagination",
       },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 1,
+      //   },
+      //   640: {
+      //     slidesPerView: 1,
+      //   },
+      //   768: {
+      //     slidesPerView: 2,
+      //   },
+      //   1024: {
+      //     slidesPerView: 3,
+      //   },
+      // }
     });
   </script>
 </body>

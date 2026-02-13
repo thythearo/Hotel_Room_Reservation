@@ -19,7 +19,7 @@
   <?php require('inc/header.php'); ?>
 
 <!-- Swiper js -->
-  <div class="container-fluid px-lg-4 mt-3">
+  <div class="container-fluid px-lg-4 mt-3 mb-3">
     <div class="swiper swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
