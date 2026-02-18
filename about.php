@@ -92,7 +92,7 @@
           <h5 class="mt-2">THY THEARO</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/kimran1.jpg" class="w-100" height="235px">
+          <img src="/hotel_room_reservation/images/about/kimran1.jpg" class="w-100">
           <h5 class="mt-2">HEAK KIMRANN</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
@@ -104,7 +104,7 @@
           <h5 class="mt-2">MAB MEAS</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="/hotel_room_reservation/images/about/sophea1.jpg" width="155px">
+          <img src="/hotel_room_reservation/images/about/sophea1.jpg" class="w-100">
           <h5 class="mt-2">PHOUEN SOPHEA</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
@@ -132,20 +132,20 @@
       pagination: {
         el: ".swiper-pagination",
       },
-      // breakpoints: {
-      //   320: {
-      //     slidesPerView: 1,
-      //   },
-      //   640: {
-      //     slidesPerView: 1,
-      //   },
-      //   768: {
-      //     slidesPerView: 2,
-      //   },
-      //   1024: {
-      //     slidesPerView: 3,
-      //   },
-      // }
+    //   breakpoints: {
+    //    320: {
+    //      slidesPerView: 1,
+    //    },
+    //    640: {
+    //      slidesPerView: 1,
+    //    },
+    //    768: {
+    //      slidesPerView: 2,
+    //    },
+    //    1024: {
+    //      slidesPerView: 3,
+    //    },
+    //  }
     });
   </script>
 </body>
