@@ -40,6 +40,16 @@
     </div>
   </div>
 
+  <div class="container-fluid mt-0">
+    <div class="row">
+      <div class="background bg-white shadow w-100 h-50 p-0">
+        <p>
+          Lorem ipsum dolor sit.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- Check Availability Form -->
   <div class="container booking-box position-relative">
     <div class="row justify-content-center">

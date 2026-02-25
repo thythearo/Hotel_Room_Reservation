@@ -92,3 +92,6 @@
     margin: 0 auto;
     height: 1.7px;
   }
+  .background{
+    border-radius: 20px;
+  }
