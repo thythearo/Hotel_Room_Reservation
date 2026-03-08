@@ -14,7 +14,8 @@
   <?php
   require('inc/Link.php');
   ?>
-
+  
+  </style>
 </head>
 
 <body class="bg-light">
@@ -36,16 +37,6 @@
         <div class="swiper-slide">
           <img src="/hotel_room_reservation/images/hotel-4.jpg" class="w-100 img-fluid banner-img d-block mx-auto" />
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid mt-0">
-    <div class="row">
-      <div class="background bg-white shadow w-100 h-50 p-0">
-        <p>
-          Lorem ipsum dolor sit.
-        </p>
       </div>
     </div>
   </div>
@@ -458,6 +449,7 @@
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "auto",
+      loop : true,
       slidesPerView: "3",
       coverflowEffect: {
         rotate: 50,

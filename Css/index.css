@@ -95,3 +95,18 @@
   .background{
     border-radius: 20px;
   }
+  .top_login{
+    position: relative;
+  }
+  .top_under{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  div.login-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
