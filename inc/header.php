@@ -39,7 +39,7 @@
 
 <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
     <div class="modal-dialog modal-md">
-        <div class="modal-content" style="background: none; margin-top: 170px; border-radius: 5px; border-color: blanchedalmond;">
+        <div class="modal-content" style="background: none; margin-top: 170px; border-radius: 5px;">
         
                 <form>
                     <div class="modal-header ml-5">

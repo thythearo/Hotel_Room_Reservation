@@ -91,3 +91,13 @@
     margin: 0 auto;
     height: 1.7px;
   }
+  .custom-alerts{
+    position:fixed;
+    top: 25px;
+    right: 25px;
+  }
+  .picture-admin{
+    width: 10px;
+    background-color: blue;
+    height: 20px;
+  }
