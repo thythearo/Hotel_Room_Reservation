@@ -1,7 +1,7 @@
 <?php
     function admin_login(){
         session_start();
-        if(!(isset($_SESSION['admin_login']) && $_SESSION['admin_login']== true)){
+        if(!(isset($_SESSION['admin_login']) && $_SESSION['admin_login'] == true)){
              echo "<script>
              window.location.href='index.php';
         </script>";

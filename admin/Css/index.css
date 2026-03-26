@@ -101,3 +101,36 @@
     background-color: blue;
     height: 20px;
   }
+
+  .name-admin{
+    font-weight: bold;
+    color: #279e8c;
+  }
+  .sub-menu{
+    line-height: 20%;
+  }
+  .management{
+    font-size: small;
+    font-weight: normal;
+  }
+.text-hotel{
+  font-size: small;
+}
+#dashboard-menu{
+  position: fixed;
+  height: 100%;
+}
+.menu-item{
+  background-color: rgb(28, 26, 26);
+  width: 100px;
+}
+.nav-pills .nav-link {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #0d6efd !important;
+    color: #fff !important;
+    transform: translateX(5px);
+}

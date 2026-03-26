@@ -1,6 +1,12 @@
 <?php
-require('inc/../essiontials.php');
-require('inc/../db_config.php');
+    require('inc/essiontials.php');
+    require('inc/db_config.php');
+
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['admin_login']) && $_SESSION['admin_login'] == true){
+        redirect('dashboard.php'); 
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +61,7 @@ require('inc/../db_config.php');
         
         if($res -> num_rows== 1) {
             $row = mysqli_fetch_assoc($res);
-            session_start();
+
             $_SESSION['admin_login']=true;
             $_SESSION['adminId'] = $row['no'];
             redirect('dashboard.php');
@@ -67,7 +73,7 @@ require('inc/../db_config.php');
 
 
     <?php
-    require('inc/../scripts.php');
+    require('inc/scripts.php');
     ?>
 </body>
 
