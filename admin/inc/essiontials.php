@@ -1,16 +1,20 @@
 <?php
+
+    define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'].'/');
     function admin_login(){
         session_start();
         if(!(isset($_SESSION['admin_login']) && $_SESSION['admin_login'] == true)){
              echo "<script>
              window.location.href='index.php';
         </script>";
+        exit;
         }
     }
     function redirect($url){
         echo "<script>
              window.location.href='$url';
         </script>";
+        exit;
     }
 
     function alert($type, $msg){
@@ -21,5 +25,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 alert;
+    }
+
+    function uploadImage($image, $folder)
+    {
+
     }
 ?>

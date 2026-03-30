@@ -1,4 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
+<?php
+    require('admin/inc/db_config.php');
+    require('admin/inc/essiontials.php');
+?>
+
+<nav id="nav-bar" class=" navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand me-5 fs-3 h1-fonts" href="index.php">SWT-</a>
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
@@ -9,10 +14,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active me-2" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link me-2" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active me-2" href="rooms.php">Rooms</a>
+                    <a class="nav-link me-2" href="rooms.php">Rooms</a>
                 </li class="nav-item">
                 <a class="nav-link me-2" href="facilities.php">Facilities</a>
                 </li class="nav-item">

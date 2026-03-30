@@ -26,7 +26,7 @@
     <div class="swiper swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="/hotel_room_reservation/images/hotel-1.jpg" class=" w-100 img-fluid banner-img d-block mx-auto" />
+          <img src="/hotel_room_reservation/images/hotel-01.jpg" class=" w-100 img-fluid banner-img d-block mx-auto" />
         </div>
         <div class="swiper-slide">
           <img src="/hotel_room_reservation/images/hotel-2.jpg" class="w-100 img-fluid banner-img d-block mx-auto" />
@@ -372,6 +372,24 @@
             <i class="bi bi-star-fill text-warning"></i>
           </div>
         </div>
+        <div class="swiper-slide bg-white p-4">
+          <div class="profile d-flex align-items-center mb-3">
+            <img src="/hotel_room_reservation/images/Star.svg" width="30px">
+            <h6 class="m-0 ms-2">សែន សាន</h6>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ad sapiente, voluptates porro, blanditiis illum
+            sed eveniet architecto veritatis minus enim. Eligendi corrupti delectus pariatur itaque alias saepe, ea
+            numquam.
+          </p>
+          <div class="Rating">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -381,40 +399,68 @@
   </div>
 
   <!-- REACH US -->
+  <?php
+    $contact_q = "SELECT * FROM `contact` WHERE `no`=?";
+    $values = [1];
+    $contact_r = mysqli_fetch_assoc(select($contact_q, $values,'i'));
+  ?>
+
   <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">REACH US</h2>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
         <iframe class="w-100" height="320px"
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d970.4908776449423!2d104.1659496266012!3d13.352545083563905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDIxJzA5LjEiTiAxMDTCsDA5JzU5LjAiRQ!5e0!3m2!1sen!2skh!4v1770796546416!5m2!1sen!2skh"
-          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <?php
+            echo $contact_r['iframe'];
+          ?> loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="col-lg-4 col-md-4">
         <div class="bg-white p-4 rounded mb-4">
           <h5>Call Us</h5>
-          <a href="tell: +885713074177" class="d-inline-block mb-2 text-decoration-none text-dark">
-            <i class="bi bi-telephone-fill"></i>+885713074177
+          <a href="tell:" +<?php
+            echo $contact_r['pn1']
+          ?> class="d-inline-block mb-2 text-decoration-none text-dark">
+            <i class="bi bi-telephone-fill"></i>+<?php
+            echo $contact_r['pn1']
+          ?>
           </a>
           <br>
-          <a href="tell: +885713074177" class="d-inline-block text-decoration-none text-dark">
-            <i class="bi bi-telephone-fill"></i>+885713074177
-          </a>
+          <?php
+            
+            if($contact_r['pn2']!=''){
+                echo <<<data
+                <a href="tell:+$contact_r[pn2]" class="d-inline-block text-decoration-none text-dark">
+                  <i class="bi bi-telephone-fill"></i>+$contact_r[pn2]
+                </a>
+                data;
+            }
+          ?>
         </div>
         <div class="bg-white p-4 rounded mb-4">
           <h5>Follow us</h5>
-          <a href="#" class="d-inline-block mb-3">
-            <span class="badge bg-light text-dark fs-6 p-2 ">
-              <i class="bi bi-twitter me-1"></i> Twitter
-            </span>
-          </a>
-          <br>
-          <a href="#" class="d-inline-block mb-3">
+          <?php
+            if($contact_r['tw']!=''){
+            echo <<<data
+            <a href="$contact_r[tw]" class="d-inline-block mb-3">
+              <span class="badge bg-light text-dark fs-6 p-2 ">
+                <i class="bi bi-twitter me-1"></i> Twitter
+              </span>
+            </a>
+            <br>
+            data;
+            }
+            ?>
+          <a href="<?php
+            echo $contact_r['fb']
+          ?>" class="d-inline-block mb-3">
             <span class="badge bg-light text-dark fs-6 p-2 ">
               <i class="bi bi-facebook me-1"></i> Facebook
             </span>
           </a>
           <br>
-          <a href="#" class="d-inline-block">
+          <a href="<?php
+            echo $contact_r['insta']
+          ?>" class="d-inline-block">
             <span class="badge bg-light text-dark fs-6 p-2 ">
               <i class="bi bi-instagram me-1"></i> Instagram
             </span>
@@ -444,38 +490,29 @@
     });
 
     // Servey Message Swiper
-    var swiper = new Swiper(".swiper-testimonials", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      loop : true,
-      slidesPerView: "3",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      }
-    });
+    var swiper2 = new Swiper(".swiper-testimonials", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: false, // ✅ fix here
+  slidesPerView: 3,
+  spaceBetween: 40,
+  loop: true,
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 0,
+    depth: 80,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }
+});
   </script>
 </body>
 

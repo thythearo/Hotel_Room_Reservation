@@ -18,4 +18,23 @@
                 element.remove();
             }, 3000);
         }
+
+function setActive() {
+    let navbar = document.getElementById('dashboard-menu');
+    let a_tags = navbar.querySelectorAll('a');
+
+    let currentPage = window.location.pathname.split('/').pop().split('?')[0];
+
+    a_tags.forEach(link => {
+        link.classList.remove('active');
+
+        let linkPage = link.getAttribute('href').split('/').pop();
+
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
+
+setActive();
     </script>

@@ -96,16 +96,8 @@
     top: 25px;
     right: 25px;
   }
-  .picture-admin{
-    width: 10px;
-    background-color: blue;
-    height: 20px;
-  }
 
-  .name-admin{
-    font-weight: bold;
-    color: #279e8c;
-  }
+
   .sub-menu{
     line-height: 20%;
   }
@@ -120,7 +112,8 @@
   position: fixed;
   height: 100%;
 }
-.menu-item{
+
+/* .menu-item{
   background-color: rgb(28, 26, 26);
   width: 100px;
 }
@@ -133,4 +126,4 @@
     background-color: #0d6efd !important;
     color: #fff !important;
     transform: translateX(5px);
-}
+} */
