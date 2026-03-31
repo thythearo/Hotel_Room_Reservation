@@ -1,5 +1,4 @@
-
-        let general_data, contacts_data;
+let general_data, contacts_data;
         let general_s_form = document.getElementById('general_s_form');
         let site_title_inp = document.getElementById('site_title_inp');
         let site_about_inp = document.getElementById('site_about_inp');
@@ -181,30 +180,60 @@
             xhr.open("POST", "ajax/setting_crud.php", true);
 
             xhr.onload = function(){
-
-                var myModal = document.getElementById('general-s');
+                var myModal = document.getElementById('team-s');
                 var modal = bootstrap.Modal.getInstance(myModal);
                 modal.hide(); // Returns a Bootstrap modal instance
                 
-                if(this.responseText== 1)
-                {
-                    alert('success', 'Change Save!');
-                    get_general();
+                if(this.responseText == 'inv_img'){
+                    alert('error', 'Only JPG and PNG images are allowed!');
+                }else if(this.responseText == 'inv_size'){
+                    alert('error', 'Image should be less than 2mb!');
+                }else if(this.responseText == 'upd_failed'){
+                    alert('error', 'images upload failed. Server Down!');
+                }else{
+                    alert('success','New member add!' );
+                    member_name_inp.value= '';
+                    member_picture_inp.value = '';
+                    get_members();
                 }
-                else
-                {
-                    alert('Error', 'No Change made!');
-                }
-
-                // reload data after update
-                get_general();
             }
 
             xhr.send(data);
         }
 
+        function get_members(){
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "ajax/setting_crud.php", true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            xhr.onload = function(){
+                document.getElementById('team-data').innerHTML = this.responseText;
+            }
+
+            xhr.send('get_members=1'); // ✅ FIXED
+        }
+
+        function remove_member(val){
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "ajax/setting_crud.php", true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            xhr.onload = function(){
+                if(this.responseText==1){
+                    alert('error', 'Member is removed!')
+                    get_members();
+                }
+                else{
+                    alert('error', 'Sever Down!');
+                }
+            }
+            
+            xhr.send('remove_member='+val);
+        }
+
         window.onload = function(){
             get_general();
             get_contacts();
+            get_members();
         }
-    

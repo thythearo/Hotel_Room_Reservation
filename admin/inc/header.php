@@ -32,14 +32,14 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">
-                <i class="px-2 bi bi-hospital"></i>Hotel Manage
+              <a class="nav-link text-dark" href="feature_facilities.php">
+                <i class="px-2 bi bi-hospital"></i>Facilities
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-dark" href="customer_management.php">
-                <i class="px-2 bi bi-person-fill-add"></i>Customer
+              <a class="nav-link text-dark" href="user_queries.php">
+                <i class="px-2 bi bi-person-fill-add"></i>User
               </a>
             </li>
 

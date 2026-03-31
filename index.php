@@ -25,18 +25,17 @@
   <div class="container-fluid px-lg-4 mt-3 mb-3">
     <div class="swiper swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="/hotel_room_reservation/images/hotel-01.jpg" class=" w-100 img-fluid banner-img d-block mx-auto" />
-        </div>
-        <div class="swiper-slide">
-          <img src="/hotel_room_reservation/images/hotel-2.jpg" class="w-100 img-fluid banner-img d-block mx-auto" />
-        </div>
-        <div class="swiper-slide">
-          <img src="/hotel_room_reservation/images/hotel-3.jpg" class=" w-100 img-fluid banner-img d-block mx-auto" />
-        </div>
-        <div class="swiper-slide">
-          <img src="/hotel_room_reservation/images/hotel-4.jpg" class="w-100 img-fluid banner-img d-block mx-auto" />
-        </div>
+        <?php
+          $res = selectAll('carousel');
+            while($row = mysqli_fetch_assoc($res)){
+              $path = CAROUSEL_IMG_PATH;
+              echo  <<< data
+                  <div class="swiper-slide">
+                    <img src="$path$row[image]" class=" w-100 img-fluid banner-img d-block   mx-auto" />
+                  </div>
+              data;
+          }
+        ?>
       </div>
     </div>
   </div>
@@ -410,9 +409,9 @@
     <div class="row">
       <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
         <iframe class="w-100" height="320px"
-          <?php
+          src="<?php
             echo $contact_r['iframe'];
-          ?> loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="col-lg-4 col-md-4">
         <div class="bg-white p-4 rounded mb-4">

@@ -9,11 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>setting panel</title>
-    <link rel="stylesheet" href="Css/index.css">
-    <style>
-  
-    </style>
-      
     <?php
         require "inc/Link.php";
     ?>
@@ -232,8 +227,7 @@
                             <p class="card-title m-0">Management Team</p>
                             <button type="button" class="btn btn-primary shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#team-s"><i class="bi bi-file-earmark-plus"></i> Add</button>
                         </div>
-                        <div class="row" id="team_data">
-
+                        <div class="row" id="team-data" style="display:flex; flex-wrap:wrap;">
                         </div>
                     </div>
                 </div>
@@ -258,7 +252,7 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" onclick="" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" onclick="member_name.value='', member_picture.value=''" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Cancel</button>
                                     <button type="submit" class="btn btn-primary text-white shadow-none">Submit</button>
                                 </div>
                             </div>
