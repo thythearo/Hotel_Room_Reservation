@@ -58,38 +58,28 @@
         echo $res;
     }
 
-    if (isset($_POST['add_facility'])) 
+        if (isset($_POST['add_facility'])) 
     {
         $frm_data = filteration($_POST);
         $img_r = uploadSVGImage($_FILES['icon'], FEATURE_FOLDER);
 
-        // Handle image errors (clean way)
+        // Handle image errors
         if (in_array($img_r, ['inv_img', 'inv_size', 'upd_failed'])) {
-            echo json_encode([
-                "status" => "error",
-                "msg" => $img_r
-            ]);
+            echo $img_r; // ✅ return plain text
             exit;
         }
 
         // Insert into database
         $q = "INSERT INTO `facilities`(`icon`,`name`,`description`) VALUES (?,?,?)";
-        $values = [$img_r,$frm_data['name'],$frm_data['desc']];
+        $values = [$img_r, $frm_data['name'], $frm_data['desc']];
 
-        $res = insert($q, $values, 'iii');
+        $res = insert($q, $values, 'sss');
 
-        // Handle DB response
-        if ($res['status'] == 'success') {
-            echo json_encode([
-                "status" => "success",
-                "msg" => "Member added successfully"
-            ]);
-        } else {
-            echo json_encode([
-                "status" => "error",
-                "msg" => $res['msg'],
-                "error" => $res['error']
-            ]);
+        // Return simple response
+        if($res == 1){
+            echo 1;   // ✅ success
+        }else{
+            echo 0;   // ❌ fail
         }
     }
 
@@ -102,19 +92,38 @@
         while($row = mysqli_fetch_assoc($res)){
             echo <<<data
             <tr>
-                <td><img src="{$path}{$row['icon']} width= "30px"</td>
-                <img src="{$path}{$row['icon']}" width="30px">
+                <td>$i</td>
+                <td><img src="{$path}{$row['icon']}" width="40px"></td>
                 <td>{$row['name']}</td>
                 <td>{$row['description']}</td>
                 <td>
-                    <button type="button" onclick="remove_facility({$row['id']})" class="btn btn-danger btn-sm">
-                        <i class="bi bi-trash"></i> Delete
-                    </button>
+                    <button onclick="remove_facility($row[id])" class="btn btn-danger btn-sm">Delete</button>
                 </td>
-            </tr>  
+            </tr>
             data;
             $i++;
         }
+    }
+
+    if(isset($_POST['remove_facility']))
+    {
+        $frm_data = filteration($_POST);
+        $values = [$frm_data['remove_facility']];
+
+        $pre_q = "SELECT * FROM `facilities` WHERE `id`=?";
+        $res = select($pre_q, $values, 'i');
+        $img = mysqli_fetch_assoc($res);
+
+        if(deleteImage($img['icon'], FEATURE_FOLDER)){
+            $q = "DELETE FROM `facilities` WHERE `id`=?";
+            $res = delete($q, $values, 'i');
+            echo $res;
+            
+        }
+        else{
+            echo 0;
+        }
+        
     }
 
 ?>

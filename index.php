@@ -83,7 +83,7 @@
   <!-- Our Room -->
   <h2 class="mt-1 pt-4 mb-4 text-center fw-5 h-font">OUR ROOMS</h2>
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6 my-3">
         <div class="card border-0 p-0 shadow" style="max-width: 350px; margin: auto; ">

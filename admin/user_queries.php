@@ -5,40 +5,59 @@
     admin_login();
     session_regenerate_id(true);
     if(isset($_GET['seen']))
-    {
-        $frm_data = filteration($_GET);
+{
+    $frm_data = filteration($_GET);
 
-        if($frm_data['seen']=='all'){
-    $q = "UPDATE `user_queries` SET `seen`=? ";
-    $values = [1];
+    if($frm_data['seen']=='all'){
+        $q = "UPDATE `user_queries` SET `seen`=?";
+        $values = [1];
 
-    if(update($q,$values,'i')){
-        alert('success', 'Marked all as read');
-    }else{
-        alert('error', 'Operation failed');
+        if(update($q,$values,'i')){
+            alert('success', 'Marked all as read');
+        }else{
+            alert('error', 'Operation failed');
+        }
+    }
+    else{
+        $q = "UPDATE `user_queries` SET `seen`=? WHERE `no`=?";
+        $values = [1, $frm_data['seen']];
+
+        if(update($q,$values,'ii')){
+            alert('success', 'Marked as read');
+        }else{
+            alert('error', 'Operation failed');
+        }
     }
 
     header("Location: user_queries.php");
     exit;
 }
-    }
     if(isset($_GET['del']))
-    {
-        $frm_data = filteration($_GET);
+{
+    $frm_data = filteration($_GET);
 
-        if($frm_data['del']=='all'){
-    $q = "DELETE FROM `user_queries`";
+    if($frm_data['del']=='all'){
+        $q = "DELETE FROM `user_queries`";
 
-    if(mysqli_query($con, $q)){
-        alert('success', 'All Data Delete');
-    }else{
-        alert('error', 'Operation failed');
+        if(mysqli_query($con, $q)){
+            alert('success', 'All Data Deleted');
+        }else{
+            alert('error', 'Operation failed');
+        }
+    }
+    else{
+        $q = "DELETE FROM `user_queries` WHERE `no`='{$frm_data['del']}'";
+
+        if(mysqli_query($con, $q)){
+            alert('success', 'Deleted successfully');
+        }else{
+            alert('error', 'Operation failed');
+        }
     }
 
     header("Location: user_queries.php");
     exit;
 }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

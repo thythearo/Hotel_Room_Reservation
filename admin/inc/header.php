@@ -25,21 +25,23 @@
         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="adminDropdown">
           <ul class="nav nav-pills flex-column">
 
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="dashboard.php">
-                <i class="px-2 bi bi-house"></i>Dashboard
-              </a>
-            </li>
+            
+         
 
             <li class="nav-item">
+              <a class="nav-link text-dark" href="rooms.php">
+                <i class="px-2 bi bi-device-ssd-fill"></i>Rooms
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link text-dark" href="feature_facilities.php">
-                <i class="px-2 bi bi-hospital"></i>Facilities
+                <i class="px-2 bi bi-device-ssd-fill"></i>Facilities
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link text-dark" href="user_queries.php">
-                <i class="px-2 bi bi-person-fill-add"></i>User
+                <i class="px-2 bi bi-person-fill-add"></i>User Contacts
               </a>
             </li>
 
@@ -62,25 +64,7 @@
             </li>
 
           </ul>
-
-          <ul class="nav nav-pills flex-column mt-4">
-
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">
-                <i class="px-2 bi bi-bell"></i>Notification
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">
-                <i class="px-2 bi bi-search"></i>Quick Search
-              </a>
-            </li>
-
-          </ul>
-
           <hr>
-
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <a class="nav-link text-dark" href="logout.php">

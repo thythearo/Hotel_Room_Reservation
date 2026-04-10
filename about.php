@@ -82,6 +82,11 @@
 
   <h3 class="my-5 fw-bold text-center">Owner Hotel</h3>
 
+  <?php
+    $contact_q = "SELECT * FROM `team_made` WHERE `no`=?";
+    $values = [1];
+    $contact_r = mysqli_fetch_assoc(select($contact_q, $values, 'i'));
+  ?>
 
   <!-- swiper js -->
   <div class="container px-4">

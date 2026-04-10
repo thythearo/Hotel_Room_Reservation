@@ -17,6 +17,9 @@
             setTimeout(() => {
                 element.remove();
             }, 3000);
+            function removeAlert(){
+                document.getElementsByClassName('alerts')[0].remove();
+            };
         }
 
 function setActive() {
